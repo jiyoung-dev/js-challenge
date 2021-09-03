@@ -1,0 +1,27 @@
+.hidden {
+  display: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  background: transparent;
+  margin-left: 20px;
+}
