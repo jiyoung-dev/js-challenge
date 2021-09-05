@@ -31,6 +31,8 @@ button {
   border: none;
   background: transparent;
   margin-left: 20px;
+  cursor: pointer;
+  color: white;
 }
 
 #login-form {
@@ -61,6 +63,7 @@ button {
 
 #login-form ::placeholder {
   color: white;
+  font-family: 'Lato', sans-serif;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -110,7 +113,7 @@ input:focus::-webkit-input-placeholder {
   border: none;
   border-style: none;
   padding: 10px 0;
-  width: 330px;
+  width: 290px;
   height: 15px;
   background: transparent;
   text-align: center;
@@ -155,9 +158,18 @@ input:focus::-webkit-input-placeholder {
   background-color: var(--light-blue);
 }
 
+.list-container {
+  display: flex;
+}
+
 #todo-list li {
   padding: 4px 0;
   padding-left: 10px;
+  width: 300px;
+}
+
+#todo-list li span {
+  text-align: start;
 }
 
 #quote {

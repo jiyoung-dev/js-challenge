@@ -21,18 +21,25 @@ function deleteToDo(event){
 
 // todo 생성
 function paintToDo(newTodo){
+
   const li = document.createElement("li");
   const span = document.createElement("span");
+
   li.appendChild(span);
   span.innerText = newTodo.text;
   li.id = newTodo.id;
-  // todo 삭제버튼 
-  const button = document.createElement("button");
-  button.innerHTML = "❌";
-  button.addEventListener("click", deleteToDo);
-  li.appendChild(button);
-  toDoList.appendChild(li);
 
+  // todo 삭제버튼 
+  const listContainer = document.createElement("div");
+  const button = document.createElement("button");
+
+  listContainer.classList.add("list-container");
+  toDoList.appendChild(listContainer);
+  listContainer.appendChild(li);
+  listContainer.appendChild(button)
+  
+  button.innerHTML = `X`;
+  button.addEventListener("click", deleteToDo);
 }
 
 
