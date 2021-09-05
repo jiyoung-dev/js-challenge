@@ -32,19 +32,27 @@ function paintToDo(newTodo){
   button.addEventListener("click", deleteToDo);
   li.appendChild(button);
   toDoList.appendChild(li);
+
 }
+
 
 function handleToDoSubmit(event){
   event.preventDefault();
   const newTodo = toDoInput.value; 
   toDoInput.value = "";
-  const newTodoObj = {
-    id: Date.now(),
-    text: newTodo
-  };
-  toDos.push(newTodoObj); // toDos 배열에 newTodo 전달 
-  paintToDo(newTodoObj);
-  saveToDos();
+  
+  if(!newTodo){
+    alert('Please enter value');
+  }else{
+    const newTodoObj = {
+      id: Date.now(),
+      text: newTodo
+    };
+    toDos.push(newTodoObj); // toDos 배열에 newTodo 전달 
+    paintToDo(newTodoObj);
+    saveToDos();
+  
+  }
 }
 
 toDoForm.addEventListener("submit", handleToDoSubmit);
